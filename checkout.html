@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>متجرك – الدفع</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">متجرك</div>
+    <nav class="nav">
+      <a href="index.html">المنتجات</a>
+      <a class="active" href="checkout.html">الدفع</a>
+      <a href="admin.html">إضافة منتجات</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>إتمام الشراء</h1>
+    <div class="grid grid-2">
+      <form id="checkoutForm" class="card form">
+        <label>الاسم الكامل
+          <input type="text" id="fullname" required />
+        </label>
+        <label>رقم الهاتف
+          <input type="tel" id="phone" required />
+        </label>
+        <label>العنوان
+          <input type="text" id="address" required />
+        </label>
+        <label>ملاحظات (اختياري)
+          <textarea id="notes" rows="3"></textarea>
+        </label>
+
+        <div class="row gap">
+          <button type="submit" class="btn primary">ادفع الآن</button>
+          <button type="button" id="clearCart2" class="btn ghost">تفريغ السلة</button>
+        </div>
+
+        <p class="muted">
+          * للديمو: زر "ادفع الآن" سيحوّلك إلى صفحة نجاح وهمية. 
+          يمكنك لاحقًا ربط الزر برابط دفع حقيقي (Stripe / PayPal / Tap / Paymob).
+        </p>
+      </form>
+
+      <div class="card">
+        <h3>مراجعة السلة</h3>
+        <div id="summary"></div>
+        <div class="row" style="margin-top:1rem">
+          <span>الإجمالي:</span>
+          <strong id="summaryTotal">0.00</strong>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <small>© متجرك التجريبي – للعرض فقط</small>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

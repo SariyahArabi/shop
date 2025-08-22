@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>متجرك – إضافة منتجات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">متجرك</div>
+    <nav class="nav">
+      <a href="index.html">المنتجات</a>
+      <a href="checkout.html">الدفع</a>
+      <a class="active" href="admin.html">إضافة منتجات</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>إضافة / تعديل المنتجات</h1>
+    <form id="productForm" class="card form">
+      <label>اسم المنتج
+        <input type="text" id="name" required placeholder="مثال: قميص قطني" />
+      </label>
+
+      <label>السعر (دولار)
+        <input type="number" id="price" step="0.01" min="0" required placeholder="مثال: 19.99" />
+      </label>
+
+      <label>صورة (رابط اختياري)
+        <input type="url" id="image" placeholder="https://..." />
+      </label>
+
+      <label>الوصف
+        <textarea id="desc" rows="3" placeholder="وصف مختصر للمنتج"></textarea>
+      </label>
+
+      <div class="row gap">
+        <button type="submit" class="btn primary">حفظ المنتج</button>
+        <button type="button" id="seedBtn" class="btn ghost">إضافة عينات</button>
+        <button type="button" id="clearBtn" class="btn danger ghost">حذف كل المنتجات</button>
+      </div>
+    </form>
+
+    <h2 style="margin-top:2rem">المنتجات الحالية</h2>
+    <div id="adminProducts" class="grid"></div>
+  </main>
+
+  <footer class="container footer">
+    <small>© متجرك التجريبي – للعرض فقط</small>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>

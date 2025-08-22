@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>متجرك – صفحة المنتجات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">متجرك</div>
+    <nav class="nav">
+      <a href="index.html" class="active">المنتجات</a>
+      <a href="checkout.html">الدفع</a>
+      <a href="admin.html">إضافة منتجات</a>
+    </nav>
+    <button class="cart-btn" id="openCart">سلة (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>منتجات جاهزة للبيع</h1>
+      <p>واجهة متجر بسيطة وخفيفة – مثالية للعرض السريع والبيع عبر الدفع الإلكتروني.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div id="products" class="grid"></div>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer-header">
+      <h3>سلة المشتريات</h3>
+      <button id="closeCart" class="icon-btn" aria-label="close">×</button>
+    </div>
+    <div id="cartItems" class="drawer-body"></div>
+    <div class="drawer-footer">
+      <div class="row">
+        <span>المجموع:</span>
+        <strong id="cartTotal">0.00</strong>
+      </div>
+      <a class="btn primary w-100" href="checkout.html">إتمام الشراء</a>
+      <button class="btn ghost w-100" id="clearCart">تفريغ السلة</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+
+  <footer class="container footer">
+    <small>© متجرك التجريبي – للعرض فقط</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
